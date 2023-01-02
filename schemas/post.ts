@@ -2,12 +2,12 @@ import {defineField, defineType} from 'sanity'
 
 export default defineType({
   name: 'post',
-  title: 'Post',
+  title: 'Publication',
   type: 'document',
   fields: [
     defineField({
       name: 'title',
-      title: 'Title',
+      title: 'Titre',
       type: 'string',
     }),
     defineField({
@@ -21,13 +21,13 @@ export default defineType({
     }),
     defineField({
       name: 'author',
-      title: 'Author',
+      title: 'Auteur',
       type: 'reference',
       to: {type: 'author'},
     }),
     defineField({
       name: 'mainImage',
-      title: 'Main image',
+      title: 'Image Principale',
       type: 'image',
       options: {
         hotspot: true,
@@ -41,12 +41,12 @@ export default defineType({
     }),
     defineField({
       name: 'publishedAt',
-      title: 'Published at',
+      title: 'Publié le',
       type: 'datetime',
     }),
     defineField({
       name: 'body',
-      title: 'Body',
+      title: 'Contenu',
       type: 'blockContent',
     }),
   ],
