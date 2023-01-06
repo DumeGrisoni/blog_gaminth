@@ -2,13 +2,14 @@ import {defineField, defineType} from 'sanity'
 
 export default defineType({
   name: 'post',
-  title: 'Publication',
+  title: 'Article',
   type: 'document',
   fields: [
     defineField({
       name: 'title',
       title: 'Titre',
       type: 'string',
+      validation: Rule => Rule.required().min(1).max(100)
     }),
     defineField({
       name: 'slug',
@@ -20,9 +21,16 @@ export default defineType({
       },
     }),
     defineField({
+      name: 'description',
+      title: 'Description',
+      type: 'text',
+      validation: Rule => Rule.required(),
+    }),
+    defineField({
       name: 'author',
       title: 'Auteur',
       type: 'reference',
+      validation: Rule => Rule.required(),
       to: {type: 'author'},
     }),
     defineField({
