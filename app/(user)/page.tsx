@@ -26,7 +26,7 @@ if (previewData()) {
         </p>
       </div>
     )}>
-        <h1>Vous êtes en mode 'Preview' de contenu</h1>
+        <h1>Mode Preview</h1>
         <PreviewBlogList query={query} />
     </PreviewSuspense>
   )
