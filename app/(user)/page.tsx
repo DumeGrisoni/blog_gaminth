@@ -15,6 +15,9 @@ const query = groq`
   } | order(createdAt desc)
 `
 
+{/** Ajout du CRON toutes les 2 minutes sur la page static*/	}
+export const revalidate = 120;
+
 async function HomePage() {
 
 if (previewData()) {
