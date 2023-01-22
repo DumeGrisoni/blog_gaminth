@@ -124,7 +124,39 @@ async function Post ( {params: {slug}}: Props) {
       <section className='mt-10 text-white  p-4 '>
         <PortableText value={post.body} components={RichTextComponent}/>
       </section>
+      <hr className='max-w-7xl my-5 mx-auto border border-[#ffedd2]' />
+
+      {/* {Commentaires de l'article} */}
+        <form className='flex flex-col p-5 my-10 max-w-2xl mx-auto mb-10'>
+           <h3 className='text-3xl text-[#ffedd2] font-bold '>Laisser un commentaire</h3>  
+           <hr className='py-3 mt-2' />     
+
+          <label className='block mb-5' >
+            <span className='pr-4 mt-2 text-[#ffedd2] uppercase font-semibold'>
+              Nom
+            </span>
+            <input type="text" placeholder='Nom' className='shadow-sm shadow-[#ffedd2] rounded py-2 px-3 form-input mt-1 block w-full ring-[#ffedd280] outline-none focus:ring'  />      
+          </label>
+
+          <label className='block mb-5'>
+            <span className='pr-4 mt-2 text-[#ffedd2] uppercase font-semibold '>
+              Email
+            </span>
+            <input type="text" placeholder='Adresse Email' className='shadow-sm shadow-[#ffedd2] rounded py-2 px-3 form-input mt-1 block w-full ring-[#ffedd280] outline-none focus:ring ' />      
+          </label >
+
+          <label className='block mb-5'>
+            <span className='pr-4 mt-2 text-[#ffedd2] uppercase font-semibold'>
+              Commentaire
+            </span>
+            <textarea placeholder='Entrez votre commentaire' rows={8} className='shadow-sm shadow-[#ffedd2] rounded py-2 px-3 form-textarea mt-1 block w-full ring-[#ffedd280] outline-none focus:ring' />      
+          </label>
+
+        </form>
     </article>
+    
+    
+
   );
 };
 
